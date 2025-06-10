@@ -10,7 +10,6 @@
     "test:e2e": "playwright test",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-    "install-build": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
