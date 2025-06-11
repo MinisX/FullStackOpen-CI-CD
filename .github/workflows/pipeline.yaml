@@ -66,19 +66,19 @@ jobs:
         with:
           severity: info
           details: A new version of Pokedex deployed
-          webhookUrl: https://study.cs.helsinki.fi/discord/webhooks/1264842173619109949
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Build failure
         uses: rjstone/discord-webhook-notify@v1
         if: failure()
         with:
           severity: error
           details: Build failed
-          webhookUrl: https://study.cs.helsinki.fi/discord/webhooks/1264842173619109949
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Build canceled
         uses: rjstone/discord-webhook-notify@v1
         if: cancelled()
         with:
           severity: warn
           details: Build canceled
-          webhookUrl: https://study.cs.helsinki.fi/discord/webhooks/1264842173619109949
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   
